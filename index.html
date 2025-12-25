@@ -39,6 +39,38 @@
         ::-webkit-scrollbar-thumb {background: #f0ffb5; border-radius: 7.5px;}
         ::-webkit-scrollbar-thumb:hover {background: Tomato;}
 
+.loader {
+  color: #FFF;
+  display: inline-block;
+  position: relative;
+  font-size: 48px;
+  font-family: Georgia, serif;
+  box-sizing: border-box;
+}
+.loader::after {
+  content: '';  
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  position: absolute;
+  bottom: 10px;
+  right: -5px;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 10px 0 white, 20px 0 rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 10px 0 white, 20px 0 white;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -57,6 +89,8 @@
 
     <h2>Thank you for making <em><span style="color: Tomato;">BeBruce.Org</span></em> part of your life for the past 7 days</h2>
     <p>In honour of the one week anniversary <em><span style="color: Tomato;">BeBruce.Org</span></em> will be taking an indefinite hiatus.</p>
+
+    <span class="loader">Loading</span>
         
         <h3><img src="images/Music.gif" alt="Music" width="90" height="30"><strong>  Daily Music Pick: </strong><em>It Was a Very Good Year - Frank Sinatra</em> </h3>
            <iframe width="750" height="500" src="https://www.youtube.com/embed/a9LHD8hIj98?si=PZqDDMtjBR_yuKn4" title="YouTube video player" frameborder="0" allow="accelerometer; 
