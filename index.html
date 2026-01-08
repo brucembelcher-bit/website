@@ -1,26 +1,57 @@
-en <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeBruce.Org</title>
+    <title>Update - BeBruce.Org</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
+     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+  <p id="rgb"></p>
+</head>
+<body>
+    <header>
+        <h1><img id="logo"  alt="BeBruce.Org" width="690" height="105"></h1>
+        <h2 class="loader">Please Hold...</h2>
+    </header>
+
+    <footer>
+        <p>&copy; 2026 BeBruce.Org</p>
+    </footer>
+
+
+  <script>
+    
+    let colorOne = Math.floor(Math.random() * 256);
+    let colorTwo = Math.floor(Math.random() * 256);
+    let colorThree = Math.floor(Math.random() * 256);
+
+
+    document.body.style.backgroundColor = "rgb(" + colorOne + ", " + colorTwo + ", " + colorThree + ")";
+
+    let logoNumber = Math.floor(Math.random() * 11);
+    
+    document.getElementById("logo").src = `images/BeBruce.Org${logoNumber}.png`;
+
+    
+  </script>
+</body>
     <style>
         body {
             font-family: Georgia, serif;
             margin: 0;
-            background-color: #51524f;
-            color: white;
+            color: black;
             padding: 1rem;
-            text-align: left;
+            text-align: center;
         }
 
         header {
-            background-color: #51524f;
-            color: white;
+            color: black
             padding: 1rem;
-            text-align: left;
+            text-align: center;
             
         }
 
@@ -31,29 +62,15 @@ en <!DOCTYPE html>
             color: Tomato
 }
 
-
         ::-webkit-scrollbar {width: 15px;}
         ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey; border-radius: 7.5px;}
         ::-webkit-scrollbar-thumb {background: #f0ffb5; border-radius: 7.5px;}
         ::-webkit-scrollbar-thumb:hover {background: Tomato;}
 
-.loader {
-  color: #FF6347;
-  display: inline-block;
-  position: relative;
-  font-size: 80px;
-  font-family: Georgia, serif;
-  box-sizing: border-box;
-}
+
 
     </style>
+
 </head>
 
-<body>
-    <header class="page-header">
-            <span class="loader">BeBruce.Org</span>
-    </header>
-
-    
-</body>
 </html>
