@@ -12,10 +12,48 @@
   <title>Document</title>
   <p id="rgb"></p>
 </head>
-<body>
+    <body>
     <header>
         <h1><img id="logo"  alt="BeBruce.Org" width="690" height="105"></h1>
     </header>
+    <main>
+        <div id="tv_container">
+            <video width="320" height="240" controls>
+                <source src="https://www.youtube.com/embed/VAl3DwqvHps?si=1W3BWlGpg6ZfnhJD"/>
+            </video>
+        </div>
+
+<style>
+#tv_container {
+    position: relative; 
+    width: 1794px; 
+    height: 1794px; 
+    display: grid;
+    place-items: center; 
+}
+
+
+#tv_container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('images/background.png') no-repeat top left;
+    background-size: contain;
+    z-index: 30; 
+    pointer-events: none; 
+}
+
+#tv_container video {
+    position: relative;
+    width: 380px; 
+    height: 236px; 
+    z-index: 10;
+}
+</style>
+    </main>
 
     <footer>
         <p>&copy; 2026 BeBruce.Org</p>
@@ -37,8 +75,27 @@
 
     
   </script>
-</body>
+    </body>
     <style>
+        .image-container {
+             position: relative; /* Establishes positioning context */
+                /* Optional: Adjust container size if needed, or let it fit the base image */
+            display: inline-block; /* Helps container wrap tightly around the base image's size */
+            }
+
+        .image-base {
+                 /* The base image can have default or specified dimensions */
+             display: block; /* Helps with layout issues that can occur with inline images */
+            }
+
+        .image-overlay {
+            position: absolute; /* Positions the overlay image relative to the container */
+            top: 10px;    /* Example: 10 pixels from the top of the container */
+            left: 50px;   /* Example: 50 pixels from the left of the container */
+                /* Adjust size as needed */
+            width: 50px;
+            height: auto;
+            }
         body {
             font-family: Georgia, serif;
             margin: 0;
@@ -59,17 +116,15 @@
             padding: 3px;
             background-color: rgba(247, 109, 123, 0.9)
             color: Tomato
-}
+    }
 
         ::-webkit-scrollbar {width: 15px;}
         ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px grey; border-radius: 7.5px;}
         ::-webkit-scrollbar-thumb {background: #f0ffb5; border-radius: 7.5px;}
         ::-webkit-scrollbar-thumb:hover {background: Tomato;}
 
-
-
     </style>
 
-</head>
+ </head>
 
 </html>
